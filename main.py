@@ -92,6 +92,8 @@ class MyApp(QWidget):
         day = datetime.date.today().day
         hour = datetime.datetime.now().hour
         minute = datetime.datetime.now().minute
+        if minute < 10: minute = int('0' + str(minute))
+
         weekday = datetime.datetime.today().strftime('%A')
 
         v_clock = QVBoxLayout()
